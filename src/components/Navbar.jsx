@@ -10,7 +10,7 @@ import logo from "../../public/logo.png";
 import profile from"../../public/profile.jpg";
 function Navbar() {
   return (
-    <div className="flex justify-between px-6 py-2">
+    <div className="flex justify-between fixed top-0 w-[100%] bg-white px-6 py-2">
       
       <div className="flex items-center space-x-4 ">
         <AiOutlineMenu className="text-xl cursor-pointer"/> 
