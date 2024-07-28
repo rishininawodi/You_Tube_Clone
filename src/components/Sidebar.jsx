@@ -21,7 +21,25 @@ import { MdPodcasts } from "react-icons/md";
 
 
 function Sidebar(){
+    const SidebarItems=[
+        {
+            id:1,
+            name:Home,
+            icon:<GoHomeFill/>
+        },
+        {
+            id:2,
+            name:Shorts,
+            icon:<SiYoutubeshorts/>
+        },
+        {
+            id:3,
+            name:Subscriptions,
+            icon:<MdOutlineSubscriptions/>
+        }
+    ]
     return (
+        
         <div className="px-6 w-[15%]">
             <div className="space-y-3 items-center">
             <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
