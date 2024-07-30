@@ -1,9 +1,8 @@
 const API_KEY =import.meta.env.VITE_YOUTUBE_API_KEY
-const BASE_URL ="https//"
+const BASE_URL ="https//youtube138.p.rapidapi.com"
 
 const options = {
-	method: 'GET',
-	hostname: '',
+	
 	
 	headers: {
 		'x-rapidapi-key': API_KEY,
