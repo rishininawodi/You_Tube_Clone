@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from "./Sidebar.jsx"; 
-import { Video } from "./Video.jsx";
+import  Video  from "./Video.jsx";
 function Home() {
   return (
     <div className="flex">
