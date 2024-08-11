@@ -6,8 +6,12 @@ import { Route, Routes } from "react-router-dom";
 import PlayingVideo from "./components/PlayingVideo";
 import Home from "./components/Home";
 import Search from "./components/Search";
+import { useAuth } from "./context/AuthProvider";
+
 function App() {
-  
+  const {loading,data}=useAuth()
+  console.log(loading);
+console.log(data);
   return (
     <div>
       <Navbar />
