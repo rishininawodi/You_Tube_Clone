@@ -14,10 +14,14 @@ export default function AuthProvider({ children }) {
 
   const fetchAlldata = (query) => {
     setLoading(true);
-    fetchData(`search/?q=${query}`).then(({ contents }) => {
+    fetchData(`search/?q=${query}&hl=en&gl=US`).then(({ contents }) => {
       //console.log(contents);
 
       setData(contents);
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
       setLoading(false);
     });
   };
