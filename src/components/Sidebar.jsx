@@ -209,7 +209,7 @@ function Sidebar(){
     ]
     return (
         
-        <div className="px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16">
+        <div className="px-6 w-[13%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
             {/*home*/}
             <div className="space-y-3 items-center">
             {
