@@ -18,7 +18,7 @@ function Navbar() {
       </div>
       
       <div className="flex w-[35%] items-center">
-        <div className="w-[100%] px-3 py-2 border border-gray-400 rounded-l-full">
+        <div className="w-[100%] px-4 py-2 border border-gray-400 rounded-l-full">
             <input type="text" placeholder="Search" className="outline-none" />
         </div>
         <button className="px-4 py-2 border border-gray-400 bg-gray-100 rounded-r-full">
