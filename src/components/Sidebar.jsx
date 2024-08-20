@@ -206,7 +206,7 @@ function Sidebar(){
             name:" Send feedback",
             icon:<MdFeedback/>
         }
-    ]
+    ];
     return (
         
         <div className="px-6 w-[13%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
@@ -215,7 +215,7 @@ function Sidebar(){
             {
                sidebarItems.map((item)=>{
                 return(
-                    <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                    <div key={item.id} className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                     <div className="text-xl cursor-pointer" >{item.icon}</div>
                     <span className="cursor-pointer">{item.name}</span>
                     </div>
@@ -235,7 +235,7 @@ function Sidebar(){
             {
                sidebarItems2.map((item)=>{
                 return(
-                    <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                    <div key={item.id} className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                     <div className="text-xl cursor-pointer" >{item.icon}</div>
                     <span className="cursor-pointer">{item.name}</span>
                     </div>
@@ -255,7 +255,7 @@ function Sidebar(){
             {
                sidebarItems3.map((item)=>{
                 return(
-                    <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                    <div key={item.id} className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                     <div className="text-xl cursor-pointer" >{item.icon}</div>
                     <span className="cursor-pointer">{item.name}</span>
                     </div>
@@ -273,7 +273,7 @@ function Sidebar(){
             {
                sidebarItems5.map((item)=>{
                 return(
-                    <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                    <div key={item.id} className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                     <div className="text-xl cursor-pointer" >{item.icon}</div>
                     <span className="cursor-pointer">{item.name}</span>
                     </div>
@@ -293,7 +293,7 @@ function Sidebar(){
             {
                sidebarItems4.map((item)=>{
                 return(
-                    <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                    <div key={item.id} className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                     <div className="text-xl cursor-pointer text-red-500" >{item.icon}</div>
                     <span className="cursor-pointer">{item.name}</span>
                     </div>
