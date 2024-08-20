@@ -9,11 +9,11 @@ import Search from "./components/Search";
 import { useAuth } from "./context/AuthProvider";
 
 function App() {
-  const {loading,data}=useAuth()
-  console.log(loading);
-console.log(data);
+  const {loading}=useAuth()
+  
   return (
     <div>
+      {loading && <loading/>}
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home/>}/>
