@@ -2,3 +2,5 @@
 
 npm i is-abbreviation-number
 mama cha,udi
+
+ npm i react-player
