@@ -59,6 +59,7 @@ function PlayingVideo() {
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
