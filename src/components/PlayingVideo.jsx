@@ -4,6 +4,7 @@ import {fetchData} from "../utils/rapidapi";
 import ReactPlayer from "react-player";
 import { AiOutlineLike } from 'react-icons/ai';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import SuggestedVideo from './SuggestedVideo';
 
 
 const abbreviateNumber = (number, digits) => {
@@ -26,14 +27,22 @@ function PlayingVideo() {
 
   useEffect(()=>{
     fetchVideoDetails();
+    fetchRelatedVideo();
   },[id]);
 
   const fetchVideoDetails=()=>{
     fetchData(`video/details/?id=${id}`).then((res)=>{
       console.log(res);
       setVideo(res);
-    })
+    });
+  };
+  const fetchRelatedVideo=()=>{
+    fetchData(`video/related-contents/?id=${id}`).then((res) => {
+      console.log(res);
+      setRelativeVideo(res);
+    });
   }
+
   return (
     <div className='flex justify-center flex-row h-[calc(100%-56px)] mt-16'>
       <div className='w-full max-w-[1580px] flex-col lg:flex-row'>
@@ -96,6 +105,16 @@ function PlayingVideo() {
             {video?.stats?.comments} <p>Comments</p>
           </div>
           <div>
+          <div className='flex flex-col px-4 py-6 h-[clac(100vh-4.625rem)] overflow-y-scroll overflow-x-hidden lg:w-[350px] xl:w-[400px]'>
+            {
+            realatedVideo?.contents?.map((item,index)=>{
+              if(item?.type !=="video") return false;
+              return<SuggestedVideo key ={index} video={item?.video}/>
+            })
+            
+            }
+            
+            </div>
             <span className='text-sm fonnt-bold line-clamp-2'>
               {video?.title}
             </span>
